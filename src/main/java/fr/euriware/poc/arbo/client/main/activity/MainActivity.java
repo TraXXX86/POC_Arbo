@@ -29,6 +29,7 @@ public class MainActivity extends AbstractActivity implements MainView.MainPrese
 
 	@Override
 	public void start(AcceptsOneWidget panel, EventBus eventBus) {
+
 		// Create View if not exists
 		view = new MainViewImpl();
 
@@ -38,7 +39,7 @@ public class MainActivity extends AbstractActivity implements MainView.MainPrese
 		// Set view on main page
 		panel.setWidget(view);
 
-		view.addValues("Valeur 1", "Valeur 2", "coucou");
+		view.addValues("Salut", "Bonjour", "Yo");
 
 		greetingService.test(new AsyncCallback<String>() {
 
@@ -54,12 +55,6 @@ public class MainActivity extends AbstractActivity implements MainView.MainPrese
 
 			}
 		});
-
-	}
-
-	@Override
-	public void test() {
-		// TODO Auto-generated method stub
 
 	}
 

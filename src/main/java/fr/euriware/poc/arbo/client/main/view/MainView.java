@@ -10,8 +10,6 @@ public interface MainView extends IsWidget {
 
 	public interface MainPresenter {
 
-		void test();
-
 	}
 
 	/* Methods available from activity to view */

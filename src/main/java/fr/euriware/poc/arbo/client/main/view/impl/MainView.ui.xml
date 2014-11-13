@@ -10,14 +10,18 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<div class="panel panel-primary col-sm-12">
-			<div align="center" class="row">
-				<div class="alert alert-info">
-					<g:ListBox ui:field="listBoxTest"/>
-					<g:TextBox ui:field="txtBoxTest"/>
-					<g:Button styleName="btn btn-success" ui:field="btnReturn" text="Sauvegarder"/>
-					<g:Label ui:field="lblUser"/>
-				</div>
+			<div class="alert alert-info center">
+				<g:ListBox ui:field="listBoxTest"/>
+				<g:TextBox ui:field="txtBoxTest"/>
+				<g:Button styleName="btn btn-success" ui:field="btnReturn" text="Sauvegarder"/>
+				<g:Label ui:field="lblUser"/>
 			</div>
+			<div class="col-sm-6">
+				<c:CellTree ui:field="leftTree"/>
+			</div>	
+			<div class="col-sm-6">
+				<c:CellTree ui:field="rightTree"/>
+			</div>			
 		</div>	
 	</g:HTMLPanel>
 </ui:UiBinder> 
