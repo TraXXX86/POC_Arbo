@@ -3,7 +3,6 @@ package fr.euriware.poc.arbo.client.widget.copy;
 import java.util.List;
 
 import com.google.gwt.cell.client.Cell;
-import com.google.gwt.cell.client.ValueUpdater;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.cellview.client.CellTree;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -60,14 +59,7 @@ public class CellTreeAsyncCopy {
 			ListDataProvider<String> test = new ListDataProvider<>();
 
 			// Return a node info that pairs the data with a cell.
-			return new DefaultNodeInfo<LeftNodeDto>(dataProvider, cell, selectionModelCellTree, new ValueUpdater<LeftNodeDto>() {
-
-				@Override
-				public void update(LeftNodeDto value) {
-					System.out.println("test");
-
-				}
-			});
+			return new DefaultNodeInfo<LeftNodeDto>(dataProvider, cell, selectionModelCellTree, null);
 
 		}
 
