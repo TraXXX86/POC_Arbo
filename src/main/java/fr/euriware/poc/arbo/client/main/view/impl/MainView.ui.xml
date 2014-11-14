@@ -16,10 +16,13 @@
 				<g:Button styleName="btn btn-success" ui:field="btnReturn" text="Sauvegarder"/>
 				<g:Label ui:field="lblUser"/>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-5">
 				<c:CellTree ui:field="leftTree"/>
 			</div>	
-			<div class="col-sm-6">
+			<div class="col-sm-2">
+				<g:Button styleName="btn btn-success" ui:field="btnPeuple" text=">"/>
+			</div>	
+			<div class="col-sm-5">
 				<c:CellTree ui:field="rightTree"/>
 			</div>			
 		</div>	

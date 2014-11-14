@@ -13,12 +13,14 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.view.client.TreeViewModel;
+import com.google.gwt.view.client.TreeViewModel.NodeInfo;
 
 import fr.euriware.poc.arbo.client.main.activity.MainActivity;
 import fr.euriware.poc.arbo.client.main.view.MainView;
-import fr.euriware.poc.arbo.client.widget.left.LeftCellTreeAsync;
-import fr.euriware.poc.arbo.client.widget.right.RightCellTree;
+import fr.euriware.poc.arbo.client.widget.copy.CellTreeAsyncCopy;
+import fr.euriware.poc.arbo.client.widget.copy.CellTreePaste;
+import fr.euriware.poc.arbo.client.widget.copy.CustomCell;
+import fr.euriware.poc.arbo.shared.dto.LeftNodeDto;
 
 public class MainViewImpl extends Composite implements MainView {
 
@@ -67,26 +69,55 @@ public class MainViewImpl extends Composite implements MainView {
 	Button btnReturn;
 
 	@UiHandler("btnReturn")
-	void onClickInit(ClickEvent e) {
+	void onClickbtnReturn(ClickEvent e) {
 		lblUser.setText(txtBoxTest.getText());
+	}
+
+	@UiField
+	Button btnPeuple;
+
+	@UiHandler("btnPeuple")
+	void onClickBtnPeuple(ClickEvent e) {
+		if (copyNodeFromTreeToTree(leftTree, rightTree)) {
+			System.out.println("Copy OK");
+		}
 	}
 
 	// ##########################################
 
 	@UiField(provided = true)
 	CellTree leftTree;
+	CellTreeAsyncCopy leftAsync;
 
 	@UiField(provided = true)
 	CellTree rightTree;
+	CellTreePaste rightAsync;
+
+	// CellTreeAsyncCopyPaste rightAsync;
 
 	private void createTrees() {
+		// Create Left tree
+		// LeftCellTreeAsync leftAsync = new LeftCellTreeAsync();
+		// leftTree = leftAsync.cellTree;
 
 		// Create Left tree
-		LeftCellTreeAsync leftAsync = new LeftCellTreeAsync();
+		leftAsync = new CellTreeAsyncCopy();
 		leftTree = leftAsync.cellTree;
 
 		// Create right tree
-		TreeViewModel rightModel = new RightCellTree.CustomTreeModel();
-		rightTree = new CellTree(rightModel, "Item 1");
+		rightAsync = new CellTreePaste();
+		rightTree = rightAsync.cellTree;
+	}
+
+	private boolean copyNodeFromTreeToTree(CellTree leftTree, CellTree rightTree) {
+		LeftNodeDto leftDto = leftAsync.selectionModelCellTree.getSelectedObject();
+		LeftNodeDto rightDto = rightAsync.selectionModelCellTree.getSelectedObject();
+		NodeInfo<?> rightNode = rightAsync.tvm.getNodeInfo(rightDto);
+		CustomCell cell = (CustomCell) rightNode.getCell();
+
+		cell.getListDataProvider().flush();
+		cell.getListDataProvider().refresh();
+
+		return cell.getListDataProvider().getList().add(leftDto);
 	}
 }
