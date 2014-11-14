@@ -17,7 +17,8 @@ import com.google.gwt.view.client.TreeViewModel;
 
 import fr.euriware.poc.arbo.client.main.activity.MainActivity;
 import fr.euriware.poc.arbo.client.main.view.MainView;
-import fr.euriware.poc.arbo.client.widget.left.LeftCellTree;
+import fr.euriware.poc.arbo.client.widget.left.LeftCellTreeAsync;
+import fr.euriware.poc.arbo.client.widget.right.RightCellTree;
 
 public class MainViewImpl extends Composite implements MainView {
 
@@ -40,7 +41,7 @@ public class MainViewImpl extends Composite implements MainView {
 
 	public MainViewImpl() {
 
-		createTree();
+		createTrees();
 
 		// Init graphical element with UiBinder
 		initWidget(uiBinder.createAndBindUi(this));
@@ -78,15 +79,14 @@ public class MainViewImpl extends Composite implements MainView {
 	@UiField(provided = true)
 	CellTree rightTree;
 
-	private void createTree() {
+	private void createTrees() {
 
-		// Create a model for the tree.
-		TreeViewModel model = new LeftCellTree.CustomTreeModel();
+		// Create Left tree
+		LeftCellTreeAsync leftAsync = new LeftCellTreeAsync();
+		leftTree = leftAsync.cellTree;
 
-		/*
-		 * Create the tree using the model. We specify the default value of the hidden root node as "Item 1".
-		 */
-		leftTree = new CellTree(model, "Item 1");
-		rightTree = new CellTree(model, "Item 1");
+		// Create right tree
+		TreeViewModel rightModel = new RightCellTree.CustomTreeModel();
+		rightTree = new CellTree(rightModel, "Item 1");
 	}
 }
