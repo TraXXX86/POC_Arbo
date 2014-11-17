@@ -56,7 +56,7 @@ public class CellTreeAsyncCopy {
 			// Create Cell
 			Cell<LeftNodeDto> cell = new CustomCell(dataProvider, null);
 
-			ListDataProvider<String> test = new ListDataProvider<>();
+			// ListDataProvider<String> test = new ListDataProvider<>();
 
 			// Return a node info that pairs the data with a cell.
 			return new DefaultNodeInfo<LeftNodeDto>(dataProvider, cell, selectionModelCellTree, null);

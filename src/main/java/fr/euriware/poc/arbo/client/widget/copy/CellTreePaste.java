@@ -41,7 +41,7 @@ public class CellTreePaste {
 			 */
 			ListDataProvider<LeftNodeDto> dataProvider = new ListDataProvider<LeftNodeDto>();
 			for (int i = 0; i < 5; i++) {
-				dataProvider.getList().add(new LeftNodeDto(value + "." + String.valueOf(i)));
+				dataProvider.getList().add(new LeftNodeDto("Copy Node " + String.valueOf(i)));
 			}
 
 			Cell<LeftNodeDto> cell = new CustomCell(dataProvider, null);
