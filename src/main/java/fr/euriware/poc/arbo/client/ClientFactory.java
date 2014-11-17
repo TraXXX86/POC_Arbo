@@ -5,6 +5,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
 
+import fr.euriware.poc.arbo.client.gquery.activity.GqueryActivity;
 import fr.euriware.poc.arbo.client.main.activity.MainActivity;
 
 public class ClientFactory {
@@ -68,6 +69,26 @@ public class ClientFactory {
 			mainActivity = new MainActivity(this);
 		}
 		return mainActivity;
+	}
+
+	/**
+	 * Start GqueryActivity activity
+	 */
+	private GqueryActivity gqueryActivity;
+
+	/**
+	 * Get GqueryActivity activity
+	 * 
+	 * @param place
+	 * @param clientFactory
+	 * 
+	 * @return
+	 */
+	public GqueryActivity getGqueryActivity() {
+		if (gqueryActivity == null) {
+			gqueryActivity = new GqueryActivity(this);
+		}
+		return gqueryActivity;
 	}
 
 }

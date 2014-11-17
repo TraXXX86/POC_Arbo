@@ -10,6 +10,9 @@
   <inherits name='com.google.gwt.user.User'/>
   <inherits name="com.google.gwt.place.Place"/>
   <inherits name="com.google.gwt.activity.Activity"/>
+  
+<!--    <inherits name='gwtquery.plugins.UiEmbedded' /> -->
+   <inherits name='com.google.gwt.query.Query'/>
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->

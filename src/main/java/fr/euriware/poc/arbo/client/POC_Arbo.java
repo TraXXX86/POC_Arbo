@@ -63,6 +63,9 @@ public class POC_Arbo implements EntryPoint {
 
 		// clientFactory.showConnectionPopup();
 
+		// Hide the text and set the width and append an h1 element
+		// $("#text").hide().css(CSS.WIDTH.with(Length.px(400))).prepend("<h1>GwtQuery Rocks !</h1>");
+
 	}
 
 	// private void createTemplateView() {

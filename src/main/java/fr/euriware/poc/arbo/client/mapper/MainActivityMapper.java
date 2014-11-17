@@ -43,9 +43,8 @@ public class MainActivityMapper implements ActivityMapper {
 	public Activity getActivity(final Place place) {
 		startFirstActivity = true;
 		if (place instanceof MainPlace || place == Place.NOWHERE) {
-			return clientFactory.getMainActivity();
+			return clientFactory.getGqueryActivity();
 		}
 		return clientFactory.getMainActivity();
 	}
-
 }
