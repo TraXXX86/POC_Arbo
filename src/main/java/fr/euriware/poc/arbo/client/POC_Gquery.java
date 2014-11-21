@@ -10,13 +10,13 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 
-import fr.euriware.poc.arbo.client.main.place.MainPlace;
+import fr.euriware.poc.arbo.client.gquery.place.GqueryPlace;
 import fr.euriware.poc.arbo.client.mapper.MainActivityMapper;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class POC_Arbo implements EntryPoint {
+public class POC_Gquery implements EntryPoint {
 	/**
 	 * The message displayed to the user when the server cannot be reached or returns an error.
 	 */
@@ -48,7 +48,7 @@ public class POC_Arbo implements EntryPoint {
 
 		// Get Current Place
 		Place currentPlace = placeController.getWhere();
-		currentPlace = new MainPlace();
+		currentPlace = new GqueryPlace();
 
 		// Start PlaceHistoryHandler with our PlaceHistoryMapper
 		// AppPlaceHistoryMapper historyMapper = GWT.create(AppPlaceHistoryMapper.class);

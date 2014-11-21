@@ -8,6 +8,7 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 
 import fr.euriware.poc.arbo.client.ClientFactory;
+import fr.euriware.poc.arbo.client.gquery.place.GqueryPlace;
 import fr.euriware.poc.arbo.client.main.place.MainPlace;
 
 /**
@@ -43,6 +44,8 @@ public class MainActivityMapper implements ActivityMapper {
 	public Activity getActivity(final Place place) {
 		startFirstActivity = true;
 		if (place instanceof MainPlace || place == Place.NOWHERE) {
+			return clientFactory.getMainActivity();
+		} else if (place instanceof GqueryPlace) {
 			return clientFactory.getGqueryActivity();
 		}
 		return clientFactory.getMainActivity();
