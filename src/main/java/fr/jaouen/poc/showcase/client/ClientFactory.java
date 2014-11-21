@@ -6,7 +6,7 @@ import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
 
 import fr.jaouen.poc.showcase.client.gquery.activity.GqueryActivity;
-import fr.jaouen.poc.showcase.client.main.activity.MainActivity;
+import fr.jaouen.poc.showcase.client.tree.activity.MainActivity;
 
 public class ClientFactory {
 

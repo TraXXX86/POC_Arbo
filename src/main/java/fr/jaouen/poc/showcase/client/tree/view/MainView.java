@@ -1,8 +1,8 @@
-package fr.jaouen.poc.showcase.client.main.view;
+package fr.jaouen.poc.showcase.client.tree.view;
 
 import com.google.gwt.user.client.ui.IsWidget;
 
-import fr.jaouen.poc.showcase.client.main.activity.MainActivity;
+import fr.jaouen.poc.showcase.client.tree.activity.MainActivity;
 
 public interface MainView extends IsWidget {
 

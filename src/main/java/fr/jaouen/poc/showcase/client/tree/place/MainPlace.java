@@ -1,4 +1,4 @@
-package fr.jaouen.poc.showcase.client.main.place;
+package fr.jaouen.poc.showcase.client.tree.place;
 
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;

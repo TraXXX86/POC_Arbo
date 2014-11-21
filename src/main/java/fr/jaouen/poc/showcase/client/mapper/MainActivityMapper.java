@@ -9,7 +9,7 @@ import com.google.gwt.place.shared.Place;
 
 import fr.jaouen.poc.showcase.client.ClientFactory;
 import fr.jaouen.poc.showcase.client.gquery.place.GqueryPlace;
-import fr.jaouen.poc.showcase.client.main.place.MainPlace;
+import fr.jaouen.poc.showcase.client.tree.place.MainPlace;
 
 /**
  * @author majaouen

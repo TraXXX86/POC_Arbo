@@ -1,12 +1,12 @@
-package fr.jaouen.poc.showcase.client.main.activity;
+package fr.jaouen.poc.showcase.client.tree.activity;
 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 import fr.jaouen.poc.showcase.client.ClientFactory;
-import fr.jaouen.poc.showcase.client.main.view.MainView;
-import fr.jaouen.poc.showcase.client.main.view.impl.MainViewImpl;
+import fr.jaouen.poc.showcase.client.tree.view.MainView;
+import fr.jaouen.poc.showcase.client.tree.view.impl.MainViewImpl;
 
 public class MainActivity extends AbstractActivity implements MainView.MainPresenter {
 

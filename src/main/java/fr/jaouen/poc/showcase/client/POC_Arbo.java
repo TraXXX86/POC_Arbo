@@ -10,8 +10,8 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 
-import fr.jaouen.poc.showcase.client.main.place.MainPlace;
 import fr.jaouen.poc.showcase.client.mapper.MainActivityMapper;
+import fr.jaouen.poc.showcase.client.tree.place.MainPlace;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.

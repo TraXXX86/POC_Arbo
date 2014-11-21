@@ -1,4 +1,4 @@
-package fr.jaouen.poc.showcase.client.main.view.impl;
+package fr.jaouen.poc.showcase.client.tree.view.impl;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -15,8 +15,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.TreeViewModel.NodeInfo;
 
-import fr.jaouen.poc.showcase.client.main.activity.MainActivity;
-import fr.jaouen.poc.showcase.client.main.view.MainView;
+import fr.jaouen.poc.showcase.client.tree.activity.MainActivity;
+import fr.jaouen.poc.showcase.client.tree.view.MainView;
 import fr.jaouen.poc.showcase.client.widget.copy.CellTreeAsyncCopy;
 import fr.jaouen.poc.showcase.client.widget.copy.CellTreePaste;
 import fr.jaouen.poc.showcase.client.widget.copy.CustomCell;
