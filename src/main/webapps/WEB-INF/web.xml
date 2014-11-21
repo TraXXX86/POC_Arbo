@@ -8,7 +8,7 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>leftNodesServlet</servlet-name>
-    <servlet-class>fr.euriware.poc.arbo.server.resources.LeftNodesServiceImpl</servlet-class>
+    <servlet-class>fr.jaouen.poc.showcase.server.resources.LeftNodesServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
